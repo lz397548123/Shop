@@ -1,0 +1,7 @@
+<!--pages/guanli_bannerid/guanli_bannerid.wxml-->
+<view wx:for="{{product}}" wx:key="_id" class="con" >
+<image src="{{item.product_img}}" class="img"></image>
+{{item.product_name}}
+<button type="primary" catchtap="xuanze" data-items="{{item}}" class="but" > 选择</button>
+ </view>
+ <button type="primary" catchtap="text" >点击这里</button>

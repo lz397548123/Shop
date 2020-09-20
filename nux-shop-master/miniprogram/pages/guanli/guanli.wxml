@@ -1,0 +1,5 @@
+<!--pages/guanli/guanli.wxml-->
+<button type="primary" catchtap="add" class="button"> 添加商品</button>
+<button type="primary" catchtap="product" class="button">商品列标</button>
+<button type="primary" catchtap="order_list" class="button"> 订单列表</button>
+<button type="primary" catchtap="banner" class="button"> 修改轮播图</button>

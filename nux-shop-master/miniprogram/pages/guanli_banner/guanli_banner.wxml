@@ -1,0 +1,13 @@
+<!--pages/guanli_banner/guanli_banner.wxml-->
+<view class="item1" wx:for="{{banners}}" wx:key="_id" index="{{index}}">
+<image src="{{item.image}}" class="image1"  mode="heightFix"> </image>
+<view>{{index+1}}、  {{item.name}}  
+<button type="primary" catchtap="shanchu" data-shanchu="{{item}}"> 删除</button>
+ </view>
+</view>
+<view class="title">增加首页轮播图</view>
+<button  type="primary" size="mini" catchtap="photo" class="button3">1、 选择照片</button> 
+<button  type="primary" size="mini" catchtap="product1" class="button3">2、选择跳转到的商品</button> 
+<image class="image1"  mode="heightFix" src="{{photo}}"> </image>
+ <view><text class="addbanner">{{linshi.name}}</text></view>
+<button type="primary"  catchtap="addbutton">添加首页轮播图</button>

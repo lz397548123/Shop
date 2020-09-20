@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "title-bar-comp": "/components/title-bar/index",
+    "product-cloumn-comp": "/components/product-column/index"
+  },
+  "navigationBarTitleText": "管理员界面-商品列标",
+  "enablePullDownRefresh": true
+}

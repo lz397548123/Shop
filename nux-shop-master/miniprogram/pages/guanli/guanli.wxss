@@ -1,0 +1,4 @@
+/* pages/guanli/guanli.wxss */
+.button{
+  margin:40rpx ;
+}

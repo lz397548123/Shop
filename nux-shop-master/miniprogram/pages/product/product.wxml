@@ -1,0 +1,79 @@
+<!--pages/product/product.wxml-->
+<view class='container'>
+	<!-- 轮播图 -->
+	<swiper class='swiper-container' indicator-dots="{{indicatorDots}}" indicator-active-color='#fff' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+		<block wx:for="{{product.product_banner}}" wx:key="item">
+			<swiper-item class='swiper-item'>
+				<image class='swiper-img' src="{{item}}" mode='scaleToFill' />
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<!-- 商品标题  -->
+	<view class='title-container'>
+		<view class="title">{{product.product_name}}</view>
+	</view>
+	<view class='price-container'>
+		<text class='symbol'>￥</text>
+		<text class='price'>{{product.product_sell_price}}</text>
+		<text class='market-price'  decode="{{true}}" space="{{true}}"> {{product.product_price}}</text>
+	</view>
+	<!-- 基本参数  -->
+
+	<view class='parameter-container'>
+		<view  class="parameter-container1">
+			<van-icon name="passed" color="green" />
+			 <text decode="{{true}}" space="{{true}}" >&nbsp;极速发货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+			<van-icon name="passed" color="green" />
+        <text class='parameter-color' decode="{{true}}" space="{{true}}" >&nbsp;剩余:{{product.product_stock}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+			<van-icon name="passed" color="green" /> 
+       <text decode="{{true}}" space="{{true}}" >&nbsp;顺丰冷链到家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    </view>
+		<view>
+			<van-icon name="passed" color="green" />
+			 <text decode="{{true}}" space="{{true}}" >&nbsp;郑州满188元包邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+			<van-icon name="passed" color="green" /> 
+			 <text decode="{{true}}" space="{{true}}" >&nbsp;批发零售都可以&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+		</view>
+	</view>
+	<!-- tab选项卡 -->
+	<view class='tab-container'>
+		<view class="swiper-tab">
+			<view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">商家详情</view>
+			<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">规格参数</view>
+		</view>
+		<view class='swiper-tab-show'>
+			<view class='dealer-details' wx:if="{{currentTab==0}}">
+				<block wx:for="{{product.product_description}}" wx:key="key">
+					<image src="{{item}}" mode="widthFix" class="product_image"></image>
+				</block>
+			</view>
+			<view class='format-container' wx:else>
+				<text>详情正在更新中!</text>
+			</view>
+		</view>
+	</view>
+
+	<!-- 底部 -->
+	<view class='bottom-container'>
+		<view class='icon-container home' bind:tap='goHome'>
+			<!-- <icon class='iconfont iconleimupinleifenleileibie'></icon> -->
+			<button open-type="contact" class='icon-container home kefu'>
+			<van-icon name="service-o" size="50rpx" color="#717171"/>
+			<text>客服</text>
+			</button>
+		</view>
+		<!-- <view class="icon-container customer {{focusStatus?'focusActive':''}}" bind:tap='focus'>
+			<icon class="iconfont  iconshoucang1 "></icon>
+			<text>关注</text>
+		</view> -->
+		<view class='icon-container cart' bind:tap='goCart'>
+			<icon class='iconfont iconicon01'></icon>
+			<text>购物车</text>
+		</view>
+		<view class='go-container'>
+			<view class='joinCart' bind:tap='joinCart'><text>加入购物车</text></view>
+			<view class='immediately' bind:tap='immediately'><text>立即下单</text></view>
+		</view>
+	</view>
+</view>

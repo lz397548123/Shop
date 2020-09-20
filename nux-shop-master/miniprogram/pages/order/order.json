@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText":"确认订单",
+  "usingComponents":{
+    "address-comp":"/components/address/index",
+    "img-btn-comp": "/components/image-button/index",
+    "van-notice-bar": "/miniprogram_npm/@vant/weapp/notice-bar/index"
+  }
+
+}

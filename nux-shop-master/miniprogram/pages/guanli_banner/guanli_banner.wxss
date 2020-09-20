@@ -1,0 +1,24 @@
+/* pages/guanli_banner/guanli_banner.wxss */
+
+.item1{
+  background-color: white;
+}
+.image1{
+  height: 360rpx;
+  width: 100%;
+ 
+}
+.title{
+  text-align: center;
+  font-size: larger;
+  font-weight: 600;
+  
+}
+.addbanner{
+  line-height: 200rpx;
+  margin: 30rpx;
+  font-size: larger;
+}
+.button3{
+  margin: 30rpx;
+}

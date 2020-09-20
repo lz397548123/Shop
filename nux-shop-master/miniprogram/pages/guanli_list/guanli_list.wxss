@@ -1,0 +1,5 @@
+/* pages/guanli_list/guanli_list.wxss */
+.products-latest-container{
+  width: 750rpx;
+  
+}

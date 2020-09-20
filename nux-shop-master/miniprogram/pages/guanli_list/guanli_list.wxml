@@ -1,0 +1,8 @@
+<!--pages/guanli_list/guanli_list.wxml-->
+ <view  class='products-latest-container'>
+    <title-bar-comp title='商品列标'></title-bar-comp>
+    <view wx:for="{{list}}" wx:key="key"  data-product='{{item}}'  bindtap='goon'>
+    <!-- <view product="{{item}}" bind:productDetails="productDetails"> -->
+      <product-cloumn-comp  product="{{item}}"  ></product-cloumn-comp>
+    </view>
+  </view>

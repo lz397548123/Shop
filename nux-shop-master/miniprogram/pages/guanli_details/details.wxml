@@ -1,0 +1,80 @@
+<!--pages/guanli_details/details.wxml-->
+<!-- 管理员的上商品的页面 -->
+
+<button catchtap="shanchu" type="primary"> 删除此商品</button>
+<view  class="con"> 
+<view class="head">商品名称：</view>
+ <input class="weui-input" auto-focus bindinput="name" value="{{name}}" placeholder="(必填项)"/>
+</view>
+
+<view  class="con"> 
+<view class="head">商品原价：</view>
+ <input class="weui-input" auto-focus type="number" bindinput="price" value="{{price}}" placeholder="(必填项)会划去的价格"/>
+</view>
+
+<view  class="con"> 
+<view class="head">商品售价：</view>
+ <input class="weui-input" auto-focus type="number" bindinput="sell_price" value="{{sell_price}}" placeholder="(必填项)展示的价格"/>
+</view>
+<view  class="con"> 
+<view class="head">商品状态：</view>
+ <input class="weui-input" auto-focus type="number" bindinput="status" value="{{status}}" placeholder="(必填项)0展示，1不展示"/>
+</view>
+<view  class="con"> 
+<view class="head">商品库存量：</view>
+ <input class="weui-input" auto-focus type="number" bindinput="stock" value="{{stock}}" placeholder="库存量"/>
+</view>
+<view  class="con"> 
+<view class="head">商品主题：</view>
+ <input class="weui-input" auto-focus type="number" bindinput="theme" value="{{theme}}" placeholder="(必填项)首页轮播图下面那四个填1~4"/>
+</view>
+<view  class="con"> 
+<view class="head">商品分类：</view>
+ <input class="weui-input" auto-focus type="number" bindinput="type" value="{{type}}" placeholder="(必填项)分类"/>
+</view>
+
+<view  class="con"> 
+<view class="head">商品是否上爆款：</view>
+ 
+    <switch class="tui-fr" checked="{{new}}" bindchange="switch1Change"/>
+</view>
+
+<button type="primary" bindtap="img"> 选择商品照片</button>
+ <image src="{{img}}"    class="img1"  mode="aspectFit"></image>
+
+ <view class='top'><text class='top_name'>上传商品轮播图照片：</text></view>
+  <!-- 图片 -->
+  <view class="images_box">
+    <block wx:key="imgbox" wx:for="{{imgbox}}">
+      <view class='img-box'>
+        <image class='img' src='{{item}}'></image>
+        <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+          <image class='img' src='../../images/jiahao.png'></image>   
+        </view>
+      </view>
+    </block>
+    <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+      <image class='img' src='../../images/jiahao.png'></image>   
+    </view>
+  </view>
+  <button  bindtap='fb' type="primary">上传商品轮播图</button>
+
+
+   <view class='top'><text class='top_name'>上传商品详情照片：</text></view>
+  <!-- 图片 -->
+  <view class="images_box">
+    <block wx:key="imgbox1" wx:for="{{imgbox1}}">
+      <view class='img-box'>
+        <image class='img' src='{{item}}'></image>
+        <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete11'>
+          <image class='img' src='../../images/jiahao.png'></image>   
+        </view>
+      </view>
+    </block>
+    <view class='img-box' bindtap='addPic11' wx:if="{{imgbox1.length<9}}">
+      <image class='img' src='../../images/jiahao.png'></image>   
+    </view>
+  </view>
+  <button  bindtap='fb1' type="primary">上传商品轮播图</button>
+
+  <button bindtap="queding" class="queding" type="warn"  > 确定修改</button>

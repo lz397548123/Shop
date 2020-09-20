@@ -1,0 +1,14 @@
+{
+  "name": "nux-shop-master",
+  "version": "1.0.0",
+  "description": "## 目录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.1.2"
+  }
+}

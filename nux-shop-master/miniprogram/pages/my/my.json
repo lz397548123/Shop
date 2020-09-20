@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title-bar-comp": "/components/title-bar/index",
+    "img-btn-comp": "/components/image-button/index",
+    "van-empty": "/miniprogram_npm/@vant/weapp/empty/index"
+  }
+}
